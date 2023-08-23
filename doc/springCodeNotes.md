@@ -78,3 +78,10 @@ public class ToDoEntry implements Serializable {
                        ToDoListService, and StarterspringApplication follow a similar structure.
 ```
 
+## SQL
+
+BLOB is for binary data (videos, images, documents, other)
+CLOB is for large text data (text)
+
+Maximum size on MySQL 2GB
+Maximum size on Oracle 128TB

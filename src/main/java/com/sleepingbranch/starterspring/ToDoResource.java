@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("todo/list")
 public class ToDoResource {
     private final ToDoEntryService toDoEntryService;
