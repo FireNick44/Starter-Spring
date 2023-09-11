@@ -15,18 +15,23 @@ public class ToDoListService {
     public ToDoListService(ToDoListRepo toDoListRepo) {
         this.toDoListRepo = toDoListRepo;
     }
+
     public ToDoList addToDoList(ToDoList toDoList){
         return toDoListRepo.save(toDoList);
     }
+
     public List<ToDoList> findAllToDoLists(){
         return toDoListRepo.findAll();
     }
+
     public ToDoList findToDoList(Long id){
         return toDoListRepo.findToDoListById(id);
     }
+
     public ToDoList updateToDoList(ToDoList toDoList) {
         return toDoListRepo.save(toDoList);
     }
+
     public void deleteToDoList(Long id){
         toDoListRepo.deleteToDoListById(id);
         /* Custom function -> repo */

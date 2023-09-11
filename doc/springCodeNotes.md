@@ -1,4 +1,5 @@
 ## Package structure:
+
 ```
 // com.sleepingbranch.starterspring
 // ├── controller
@@ -16,7 +17,9 @@
 ```
 
 ## Controller class that handles HTTP requests
+
 ```java
+
 @RestController
 @RequestMapping("todo/list")
 public class ToDoController {
@@ -54,6 +57,7 @@ public class ToDoController {
 ```
 
 ## Model class representing a ToDoEntry entity
+
 ```
 @Entity
 public class ToDoEntry implements Serializable {
@@ -85,3 +89,33 @@ CLOB is for large text data (text)
 
 Maximum size on MySQL 2GB
 Maximum size on Oracle 128TB
+
+## Testing
+
+| Assertion Library | Assertion Method                 | Example                                                             | Description                                      |
+|-------------------|----------------------------------|---------------------------------------------------------------------|--------------------------------------------------|
+| JUnit             | `assertEquals`                   | `assertEquals(5, calculator.add(2, 3));`                            | Checks if two values are equal.                  |
+| JUnit             | `assertNotEquals`                | `assertNotEquals("apple", "banana");`                               | Checks if two values are not equal.              |
+| JUnit             | `assertTrue`                     | `assertTrue(result > 0);`                                           | Checks if a condition is true.                   |
+| JUnit             | `assertFalse`                    | `assertFalse(errors.isEmpty());`                                    | Checks if a condition is false.                  |
+| JUnit             | `assertNull`                     | `assertNull(value);`                                                | Checks if a value is null.                       |
+| JUnit             | `assertNotNull`                  | `assertNotNull(result);`                                            | Checks if a value is not null.                   |
+| JUnit             | `assertSame`                     | `assertSame(expected, actual);`                                     | Checks if two objects are the same instance.     |
+| JUnit             | `assertNotSame`                  | `assertNotSame(original, copy);`                                    | Checks if two objects are not the same instance. |
+| JUnit             | `assertThrows`                   | `assertThrows(NullPointerException.class, () -> person.getName());` | Checks if a specific exception is thrown.        |
+
+## Regex (not really spring specific but always helpful)
+
+| Regular Expression | Description                                     |
+|--------------------|-------------------------------------------------|
+| `[0-9]` or `\d`    | Matches any single digit (0 through 9).         |
+| `[1-9]`            | Matches any digit from 1 through 9.             |
+| `[0-7]`            | Matches any digit from 0 through 7.             |
+| `[2-7]`            | Matches any digit from 2 through 7.             |
+| `[A-Fa-f0-9]`      | Matches any hexadecimal digit (0-9, A-F, a-f).  |
+| `\p{Digit}`        | Matches any digit (Unicode category).           |
+| `\p{IsDigit}`      | Matches any digit (Unicode character property). |
+| `[:digit:]`        | Matches any digit (POSIX character class).      |
+
+These shortcuts can be used interchangeably depending on your specific regex needs. For example, if you want to match
+any single digit from 1 to 9, you can use `[1-9]`, `\d`, or `\p{Digit}`.
