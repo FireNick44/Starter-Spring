@@ -119,3 +119,28 @@ Maximum size on Oracle 128TB
 
 These shortcuts can be used interchangeably depending on your specific regex needs. For example, if you want to match
 any single digit from 1 to 9, you can use `[1-9]`, `\d`, or `\p{Digit}`.
+
+
+## Validation annotations example
+
+| Annotation        | Description                                        |
+|-------------------|----------------------------------------------------|
+| `@NotNull`        | Not null                                           |
+| `@NotEmpty`       | Not null and not empty                            |
+| `@NotBlank`       | Not null and non-whitespace                       |
+| `@Size`           | Size or length constraints                         |
+| `@Min`            | Minimum value                                      |
+| `@Max`            | Maximum value                                      |
+| `@DecimalMin`     | Minimum decimal value                              |
+| `@DecimalMax`     | Maximum decimal value                              |
+| `@Digits`         | Exact number of digits                             |
+| `@Email`          | Valid email address                                |
+| `@Pattern`        | Matches a regular expression                       |
+| `@Future`         | Date or time in the future                         |
+| `@Past`           | Date or time in the past                           |
+| `@AssertTrue`     | Must be `true`                                     |
+| `@AssertFalse`    | Must be `false`                                    |
+| `@Positive`       | Positive numeric value (greater than zero)         |
+| `@PositiveOrZero` | Positive numeric value or zero                     |
+| `@Negative`       | Negative numeric value (less than zero)            |
+| `@NegativeOrZero` | Negative numeric value or zero                     |
